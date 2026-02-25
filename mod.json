@@ -1,0 +1,18 @@
+{
+    "geode": "5.0.1",
+    "id": "zebtheincredibox.phoneout",
+    "version": "v1.0.0",
+    "name": "PhoneOut",
+    "developer": "Zebtheincredibox",
+    "description": "Professional layout tools for Geometry Dash. Optimized for both Windows and Android.",
+    "repository": "https://github.com/zebtheincredibox/PhoneOut",
+    "platforms": ["win", "android"],
+    "settings": {
+        "layout-mode-enabled": {
+            "name": "Enable Layout Mode",
+            "type": "bool",
+            "default": false,
+            "description": "Toggle visibility of decorative objects."
+        }
+    }
+}
