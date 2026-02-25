@@ -25,5 +25,4 @@ jobs:
           bindings: geode-sdk/bindings
           bindings-ref: main
           sdk: v5.0.1
-          sdk-ref: main
-          combine: true # Corrected parameter name
+          combine: true
