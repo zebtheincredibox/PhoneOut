@@ -1,20 +1,23 @@
 cmake_minimum_required(VERSION 3.13.4)
 
-# Define the project
+# Define Mod ID and Project
+set(MOD_ID "zebtheincredibox.phoneout")
 project(PhoneOut VERSION 1.0.0)
 
-# Find the Geode SDK (Required for GD Modding)
-find_package(Geode REQUIRED)
+# Ensure CMake can find the Geode SDK in the GitHub Action environment
+if(NOT DEFINED GEODE_SDK)
+    set(GEODE_SDK $ENV{GEODE_SDK})
+endif()
 
-# Set your Mod ID from mod.json
-set(MOD_ID "zebtheincredibox.phoneout")
+# Find Geode package with explicit path
+find_package(Geode REQUIRED PATHS ${GEODE_SDK})
 
-# Add the source files
+# Source files
 add_geode_mod(
     ${MOD_ID}
     SOURCES 
         src/main.cpp
 )
 
-# Setup the mod for Windows and Android
+# Finalize platform-specific setup (Windows/Android)
 setup_geode_mod(${MOD_ID})
