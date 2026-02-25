@@ -23,4 +23,6 @@ jobs:
         uses: geode-sdk/build-geode-mod@main
         with:
           bindings: geode-sdk/bindings
-          combined: true # This merges Win and Android into one .geode file
+          bindings-ref: main 
+          combine: true # Fix: Parameter is 'combine', not 'combined'
+          sdk: v5.0.1   # Fix: Matching your Geode 5.0.1 requirement
